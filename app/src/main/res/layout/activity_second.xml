@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/topMargin"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/vStoryCircle"
+        android:layout_width="42dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1"
+        android:background="@drawable/ic_story_background"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topMargin"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        app:layout_constraintTop_toTopOf="@id/vStoryCircle"
+        app:layout_constraintBottom_toBottomOf="@id/vStoryCircle"
+        app:layout_constraintStart_toStartOf="@id/vStoryCircle"
+        app:layout_constraintEnd_toEndOf="@id/vStoryCircle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/hello_jane"
+        android:textColor="@color/primary_dark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin"
+        app:layout_constraintBottom_toTopOf="@id/tvWelcome"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/good_morning_remember_to_save_today"
+        android:textColor="@color/primary_dark"
+        android:textSize="13sp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHello"
+        />
+
+    <View
+        android:id="@+id/vSavings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/ic_view_background"
+        app:layout_constraintDimensionRatio="2.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vStoryCircle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTotalSavings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/total_savings"
+        android:textColor="@color/total_savings_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="113dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/amount"
+        android:textColor="@color/white"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalSavings"/>
+
+    <View
+        android:id="@+id/vWithdraw"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:background="@drawable/ic_add_money_view_background"
+        app:layout_constraintDimensionRatio="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vSavings"
+        android:layout_marginTop="25dp"/>
+
+
+    <ImageView
+        android:id="@+id/ivAddMoney"
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="308dp"
+        android:src="@drawable/ic_vector"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddMoney"
+        android:layout_width="87dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/add_money"
+        android:textColor="@color/light_grey_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vWithdraw"
+        app:layout_constraintDimensionRatio="3.9"
+        app:layout_constraintEnd_toEndOf="@+id/vWithdraw"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="@+id/vWithdraw"
+        app:layout_constraintTop_toTopOf="@+id/vWithdraw" />
+
+    <View
+        android:id="@+id/vAddMoney"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ic_withdraw_view_background"
+        app:layout_constraintDimensionRatio="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vSavings" />
+
+    <ImageView
+        android:id="@+id/ivWithdraw"
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="308dp"
+        android:src="@drawable/ic_withdraw_1"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWithdraw"
+        android:layout_width="87dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/withdraw"
+        android:textColor="@color/light_grey_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vAddMoney"
+        app:layout_constraintDimensionRatio="3.9"
+        app:layout_constraintEnd_toEndOf="@+id/vAddMoney"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toStartOf="@+id/vAddMoney"
+        app:layout_constraintTop_toTopOf="@+id/vAddMoney" />
+
+    <TextView
+        android:id="@+id/tvGetMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/get_your_money_working_for_you"
+        android:textColor="@color/primary_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vAddMoney"
+        android:layout_marginTop="15dp"/>
+
+    <View
+        android:id="@+id/vEmergency"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_empty_type_view"
+        app:layout_constraintDimensionRatio="6.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="427dp"
+        app:layout_constraintTop_toBottomOf="@id/tvGetMoney"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/ivWallet"
+        android:layout_width="22dp"
+        android:layout_height="0dp"
+        android:src="@drawable/wallet"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@+id/vEmergency"
+        app:layout_constraintTop_toTopOf="@+id/vEmergency"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="17dp"/>
+
+    <TextView
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:text="@string/save_for_an_emergency"
+        android:textSize="14sp"
+        app:layout_constraintDimensionRatio="6.8"
+        app:layout_constraintStart_toStartOf="@+id/vEmergency"
+        app:layout_constraintTop_toTopOf="@+id/vEmergency"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="70dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <ImageView
+        android:id="@+id/ivFirstArrow"
+        android:layout_width="28dp"
+        android:layout_height="0dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/vEmergency"
+        app:layout_constraintTop_toTopOf="@+id/vEmergency"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+
+    <View
+        android:id="@+id/vInvest"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_empty_type_view"
+        app:layout_constraintDimensionRatio="6.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="427dp"
+        app:layout_constraintTop_toBottomOf="@id/vEmergency"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:text="@string/invest_your_money"
+        android:textSize="14sp"
+        app:layout_constraintDimensionRatio="6.8"
+        app:layout_constraintStart_toStartOf="@+id/vInvest"
+        app:layout_constraintTop_toTopOf="@+id/vInvest"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="70dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <ImageView
+        android:id="@+id/ivMoney"
+        android:layout_width="22dp"
+        android:layout_height="0dp"
+        android:src="@drawable/invest"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@+id/vInvest"
+        app:layout_constraintTop_toTopOf="@+id/vInvest"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="17dp"/>
+
+    <ImageView
+        android:id="@+id/ivSecondArrow"
+        android:layout_width="28dp"
+        android:layout_height="0dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/vInvest"
+        app:layout_constraintTop_toTopOf="@+id/vInvest"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+    <TextView
+        android:id="@+id/tvEarnMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/ways_to_earn_more_money"
+        android:textColor="@color/primary_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vInvest"
+        android:layout_marginTop="15dp"/>
+
+    <View
+        android:id="@+id/vInvite"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_empty_type_view"
+        app:layout_constraintDimensionRatio="6.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="427dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEarnMoney"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/ivInvest"
+        android:layout_width="22dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_earn"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@+id/vInvite"
+        app:layout_constraintTop_toTopOf="@+id/vInvite"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="17dp"/>
+
+    <TextView
+        android:id="@+id/tvBonus"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4.7"
+        app:layout_constraintStart_toStartOf="@+id/vInvite"
+        app:layout_constraintTop_toTopOf="@+id/vInvite"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+        android:text="@string/invite_your_friends_and_get_a_bonus"
+        android:textSize="14sp"
+        android:textColor="@color/primary_dark" />
+
+    <ImageView
+        android:id="@+id/ivThirdArrow"
+        android:layout_width="28dp"
+        android:layout_height="0dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/vInvite"
+        app:layout_constraintTop_toTopOf="@+id/vInvite"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
