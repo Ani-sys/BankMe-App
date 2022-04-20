@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
+            //binding.etAccountPassword.text.toString() text ფილდი აკლდა
 
             if (binding.etAccountPassword.toString().isBlank()){
                 val toast = Toast.makeText(this,
